@@ -33,8 +33,9 @@ public class BoilingProccess extends Egg implements CookingSteps{
 
 	@Override
 	public void addingEggs(int eggCount) {
+		for(int i = 0;i<eggCount;i++) {
 		Egg eggs = new Egg();
-		totalEggs.add(eggs);
+		totalEggs.add(eggs);}
 		if(counter>0) {
 	
 			System.out.println("\nPutting the " + eggCount +" eggs inside the big pot...");
@@ -44,20 +45,22 @@ public class BoilingProccess extends Egg implements CookingSteps{
 	}
 	
 	@Override
-	public void boilingTheEggs(BoilingProccess b, int minutes) {
+	public void boilingTheEggs(BoilingProccess b, int minutes, int eggCount) {
 		System.out.println("\nStarting to boil the eggs for exactly "+ minutes + " minutes...");
+		for(int i = 0;i< eggCount;i++) {
 		if(minutes > 3 && minutes < 5) {
 			b.setEggWhite("Cooked");
-			System.out.println("\n----------------------\nThe egg yolk is: " + b.getEggYolk()
-								+ "\nThe egg white is: "+ b.getEggWhite()+"\n----------------------\n");
+			System.out.println("\n----------------------\nEgg "+ (i+1) +"'s yolk is: " + b.getEggYolk()
+								+ "\nEgg "+ (i+1) +"'s white is: "+ b.getEggWhite()+"\n----------------------");
 		}else if(minutes >=5) {
 			b.setEggWhite("Cooked");
 			b.setEggYolk("Cooked");
-			System.out.println("\n----------------------\nThe egg yolk is: " + b.getEggYolk()
-			+ "\nThe egg white is: "+b.getEggWhite()+"\n----------------------\n");
+			System.out.println("\n----------------------\nEgg "+ (i+1) +"'s yolk is: " + b.getEggYolk()
+			+ "\nEgg "+ (i+1) +"'s white is: "+b.getEggWhite()+"\n----------------------");
 		}else {
-			System.out.println("\n----------------------\nThe egg yolk is: " + b.getEggYolk()
-			+ "\n----------------------\nThe egg white is: "+b.getEggWhite()+"\n----------------------\n");
+			System.out.println("\n----------------------\nEgg "+ (i+1) +"'s yolk is: " + b.getEggYolk()
+			+ "\n----------------------\nEgg "+ (i+1) +"'s white is: "+b.getEggWhite()+"\n----------------------");
+		}
 		}
 	}
 	

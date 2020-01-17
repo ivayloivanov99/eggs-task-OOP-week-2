@@ -11,7 +11,7 @@ public class Cooker {
 		b.choosingPot(totalEggs);    
 		b.addingEggs(totalEggs);
 		b.fillingThePot();
-        b.boilingTheEggs(b, timer);
+        b.boilingTheEggs(b, timer,totalEggs);
         b.cleaningAfter(b);        	
 	}
 }

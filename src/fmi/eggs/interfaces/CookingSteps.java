@@ -7,6 +7,6 @@ public interface CookingSteps {
 	public void choosingPot(int eggCount);
 	public void addingEggs(int eggCount);
 	public void fillingThePot();
-	public void boilingTheEggs(BoilingProccess b,int minutes);
+	public void boilingTheEggs(BoilingProccess b,int minutes,int eggCount);
 	public void cleaningAfter(BoilingProccess b);
 }
